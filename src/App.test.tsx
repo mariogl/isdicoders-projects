@@ -1,15 +1,17 @@
 import { screen } from "@testing-library/react";
-import customRender from "../../testUtils";
-import Header from "./Header";
+import App from "./App";
+import customRender from "./testUtils";
 
-describe("Given a Header component", () => {
+describe("Given an App component", () => {
   describe("When rendered", () => {
     test("Then it should show a h1 title 'ISDI Coders Projects'", () => {
-      customRender(<Header />);
+      const expectedTitle = /isdi coders projects/i;
+
+      customRender(<App />);
 
       const title = screen.queryByRole("heading", {
         level: 1,
-        name: /isdi coders projects/i,
+        name: expectedTitle,
       });
 
       expect(title).toBeInTheDocument();
