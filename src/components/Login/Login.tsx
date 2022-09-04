@@ -23,7 +23,7 @@ const Login = (): JSX.Element => {
   return (
     <form>
       <FormControl mb="6">
-        <FormLabel>Username</FormLabel>
+        <FormLabel htmlFor="username">Username</FormLabel>
         <Input
           type="text"
           id="username"
@@ -32,7 +32,7 @@ const Login = (): JSX.Element => {
         />
       </FormControl>
       <FormControl mb="6">
-        <FormLabel>Password</FormLabel>
+        <FormLabel htmlFor="password">Password</FormLabel>
         <Input
           type="password"
           id="password"

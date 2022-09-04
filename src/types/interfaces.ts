@@ -1,6 +1,9 @@
-interface Project {
+export interface Project {
   id: string;
   name: string;
 }
 
-export default Project;
+export interface Credentials {
+  username: string;
+  password: string;
+}

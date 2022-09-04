@@ -1,4 +1,4 @@
-import Project from "../../../types/interfaces";
+import { Project } from "../../../types/interfaces";
 import { loadProjectsActionCreator, projectsReducer } from "./projectsSlice";
 
 describe("Given a projectsReducer reducer", () => {
