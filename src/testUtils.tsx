@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { store as appStore } from "./redux/store";
-import theme from "./theme/theme";
+import { theme } from "./theme/theme";
 
 interface WrapperProps {
   children: JSX.Element | JSX.Element[];

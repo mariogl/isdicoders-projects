@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { ChakraProvider } from "@chakra-ui/react";
+import { chackraCustomTheme } from "./theme/theme";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -14,7 +15,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <ChakraProvider>
+        <ChakraProvider theme={chackraCustomTheme}>
           <App />
         </ChakraProvider>
       </BrowserRouter>

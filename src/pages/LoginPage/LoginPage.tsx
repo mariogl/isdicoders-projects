@@ -1,9 +1,12 @@
+import { Heading } from "@chakra-ui/react";
 import Login from "../../components/Login/Login";
 
 const LoginPage = (): JSX.Element => {
   return (
     <>
-      <h2>Login</h2>
+      <Heading size="lg" mb="5">
+        Login
+      </Heading>
       <Login />
     </>
   );
