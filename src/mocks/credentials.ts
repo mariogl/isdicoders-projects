@@ -1,4 +1,4 @@
-import { Credentials } from "../types/interfaces";
+import { Credentials } from "../types";
 
 const mockCredentials: Credentials = {
   username: "test",

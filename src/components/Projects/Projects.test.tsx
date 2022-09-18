@@ -1,3 +1,4 @@
+import { screen } from "@testing-library/react";
 import customRender from "../../testUtils";
 import Projects from "./Projects";
 

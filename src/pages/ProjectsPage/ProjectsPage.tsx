@@ -1,19 +1,28 @@
+import axios from "axios";
 import { useEffect } from "react";
+import Projects from "../../components/Projects/Projects";
 import { loadProjectsActionCreator } from "../../redux/features/projects/projectsSlice";
 import { useAppDispatch } from "../../redux/hooks";
+import { apiEndpoints } from "../../routes";
 
 const ProjectsPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}projects`);
-      const projectsAPI = await response.json();
-
-      dispatch(loadProjectsActionCreator(projectsAPI));
+      const {
+        data: { projects },
+      } = await axios.get(apiEndpoints.getProjects);
+      dispatch(loadProjectsActionCreator(projects));
     })();
   });
-  return <h2>Projects list</h2>;
+
+  return (
+    <>
+      <h2>Projects list</h2>
+      <Projects />
+    </>
+  );
 };
 
 export default ProjectsPage;

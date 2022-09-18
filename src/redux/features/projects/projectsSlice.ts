@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Project } from "../../../types/interfaces";
+import { Project } from "../../../types";
 
 const initialProjects: Project[] = [];
 
