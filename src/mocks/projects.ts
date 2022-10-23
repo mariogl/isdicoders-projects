@@ -1,4 +1,6 @@
-const mockProjects = [
+import { Project } from "../types";
+
+const mockProjects: Project[] = [
   {
     id: "1",
     name: "Project 1",
