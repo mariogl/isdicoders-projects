@@ -1,5 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { useAppSelector } from "../../redux/hooks";
 import { routes } from "../../routes";
 import { Challenge, WeekStrings } from "../../types";
@@ -74,9 +75,9 @@ const Challenges = (): JSX.Element => {
               }
             ).challenges.map((challenge) => (
               <li key={challenge.id}>
-                <a href={`${routes.projects}/${challenge.id}`}>
+                <Link to={`${routes.projects}/${challenge.id}`}>
                   {challenge.name.split("ch")[1].toUpperCase()}
-                </a>
+                </Link>
               </li>
             ))}
           </ChallengeStyled>

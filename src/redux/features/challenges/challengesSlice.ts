@@ -10,7 +10,12 @@ const challengesSlice = createSlice({
     loadChallenges: (
       challenges: Challenge[],
       action: PayloadAction<Challenge[]>
-    ) => [...action.payload],
+    ) => [
+      ...action.payload.map((challenge) => ({
+        ...challenge,
+        name: challenge.name.toLowerCase(),
+      })),
+    ],
   },
 });
 

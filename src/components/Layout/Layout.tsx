@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import ChallengesPage from "../../pages/ChallengesPage/ChallengesPage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
+import ProjectsPage from "../../pages/ProjectsPage/ProjectsPage";
 import { routes } from "../../routes";
 import AntiProtectedRoute from "../AntiProtectedRoute/AntiProtectedRoute";
 import Header from "../Header/Header";
@@ -21,6 +22,14 @@ const Layout = (): JSX.Element => {
               element={
                 <ProtectedRoute>
                   <ChallengesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={`${routes.projects}/:challengeId`}
+              element={
+                <ProtectedRoute>
+                  <ProjectsPage />
                 </ProtectedRoute>
               }
             />

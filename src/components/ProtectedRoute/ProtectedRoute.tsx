@@ -8,6 +8,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps): JSX.Element => {
   const user = useAppSelector((state) => state.user);
+
   return <>{user.isLoggedIn ? children : <Navigate to={routes.login} />}</>;
 };
 
