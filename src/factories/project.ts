@@ -4,7 +4,7 @@ import mongoid from "mongoid-js";
 import { Project } from "../types";
 
 const getProject = (blank = false): Project => ({
-  id: blank ? "" : mongoid(),
+  _id: blank ? "" : mongoid(),
   challenge: blank ? "" : mongoid(),
   name: blank ? "" : faker.name.findName(),
   student: blank ? "" : faker.name.firstName(),

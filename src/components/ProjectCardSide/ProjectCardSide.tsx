@@ -13,9 +13,8 @@ import {
 } from "../ProjectCard/ProjectCardStyled";
 import ReactTimeAgo from "react-time-ago";
 import { FaExclamation, FaTimes } from "react-icons/fa";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 import { Project, SonarInfo } from "../../types";
+import { useAppSelector } from "../../redux/hooks";
 
 interface ProjectCardSideProps {
   side: "back" | "front";
@@ -37,7 +36,7 @@ const ProjectCardSide = ({
   project: { prod, repo, sonarKey },
 }: ProjectCardSideProps): JSX.Element => {
   const validationURL = `https://validator.w3.org/nu/?doc=${prod[side]}`;
-  const compactMode = useSelector((state: RootState) => state.ui.compactMode);
+  const compactMode = useAppSelector((state) => state.ui.compactMode);
 
   return (
     <StyledSide compactMode={compactMode}>

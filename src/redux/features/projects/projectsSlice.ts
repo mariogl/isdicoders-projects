@@ -30,7 +30,7 @@ const projectsSlice = createSlice({
     ): ProjectsState => ({
       ...projectsState,
       projects: projectsState.projects.filter(
-        (project) => project.id !== action.payload
+        (project) => project._id !== action.payload
       ),
     }),
     filterProjectsByTutor: (

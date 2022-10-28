@@ -53,7 +53,7 @@ const Projects = (): JSX.Element => {
           className="projects-list"
         >
           {projects.map((project, i) => (
-            <li key={project.id} className="container-card">
+            <li key={project._id} className="container-card">
               <ProjectCard project={project} backgroundColor={colors[i]} />
             </li>
           ))}

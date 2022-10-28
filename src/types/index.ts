@@ -12,7 +12,7 @@ export interface Tutor {
   name: string;
 }
 export interface Project {
-  id: string;
+  _id: string;
   challenge: string;
   name: string;
   student: string;
