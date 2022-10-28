@@ -12,11 +12,14 @@ const Filters = (): JSX.Element => {
 
   const setFilterCoverage = (event: SyntheticEvent, type: string) => {
     event.preventDefault();
-    dispatch(
-      filterProjectsByCoverageActionCreator(
-        type === currentCoverageFilter ? "" : type
-      )
-    );
+
+    if (type === currentCoverageFilter) {
+      localStorage.removeItem("filterByCoverage");
+      dispatch(filterProjectsByCoverageActionCreator(""));
+    } else {
+      localStorage.setItem("filterByCoverage", type);
+      dispatch(filterProjectsByCoverageActionCreator(type));
+    }
   };
 
   return (
