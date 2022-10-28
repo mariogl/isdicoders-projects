@@ -20,7 +20,7 @@ interface ProdPreviewProps {
 const ProdPreview = ({ url }: ProdPreviewProps): JSX.Element => {
   return (
     <StyledIframe>
-      <iframe src={url} title="preview" />
+      <iframe src={url} title="preview" data-testid="iframe" />
     </StyledIframe>
   );
 };
