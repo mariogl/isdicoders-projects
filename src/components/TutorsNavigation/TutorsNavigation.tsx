@@ -14,6 +14,7 @@ const TutorsNavigation = (): JSX.Element => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.preventDefault();
+    localStorage.setItem("filterByTutor", id);
     dispatch(filterProjectsByTutorActionCreator(id));
   };
 
